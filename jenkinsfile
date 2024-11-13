@@ -12,12 +12,15 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
+                sh 'node -v' // Pour vérifier si Node.js est installé
+                sh 'npm -v'  // Pour vérifier si npm est installé
                 sh 'npm install'
             }
         }
         stage('Build') {
             steps {
-                sh 'npm run build'
+                echo 'Building...'
+                sh 'npm run build' // Exemple de commande de build
             }
         }
         stage('Docker Build') {
