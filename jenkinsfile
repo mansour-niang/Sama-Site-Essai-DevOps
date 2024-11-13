@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                 git(
-                    url: 'https://github.com/mansour-niang/Sama-Site-Essai-DevOps.git', 
+                  git(
+                    url: 'https://github.com/mansour-niang/Sama-Site-Essai-DevOps.git',
+                    branch: 'main',  // Changez 'master' en 'main' si nécessaire
                     credentialsId: 'github-token'
                 )
             }
