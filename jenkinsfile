@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        DOCKER_CREDENTIALS = credentials('dockerhub-credentials') // ID du credential Docker Hub dans Jenkins
+    }
     stages {
         stage('Clone') {
             steps {
@@ -26,7 +29,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    dockerImage = docker.build("balkhawmi/ton-image-vitejs")
+                    docker.build("balkhawmi/ton-image-vitejs")
                 }
             }
         }
