@@ -22,7 +22,7 @@ export default function Hero() {
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Cairo, sans-serif' }}>
-           BIENVENUE DANS <span style={{ color: '#00A675' }}>DOCKERFILE</span>
+           BIENVENUE DANS <span style={{ color: '#00A675' }}>DOCKER</span>FILE
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200" style={{ fontFamily: 'Open Sans, sans-serif' }}>
             Votre Partenaire en Sécurité Documentaire Post-Quantique
